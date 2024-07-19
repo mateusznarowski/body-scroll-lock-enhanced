@@ -1,6 +1,7 @@
 {
   "name": "body-scroll-lock-enhanced",
   "version": "0.0.1",
+  "description": "Enables body scroll locking (for iOS Mobile and Tablet, Android, desktop Safari/Chrome/Firefox) without breaking scrolling of a target element (eg. modal/lightbox/flyouts/nav-menus)",
   "license": "MIT",
   "author": "Mateusz Narowski",
   "repository": "https://github.com/mateusznarowski/body-scroll-lock-enhanced",
