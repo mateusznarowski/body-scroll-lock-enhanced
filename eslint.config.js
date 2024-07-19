@@ -17,14 +17,20 @@ export default [
       '@stylistic': stylistic
     },
     rules: {
+      // Typescript
       ...typescript.configs['stylistic-type-checked'].rules,
-      ...stylistic.configs['recommended-flat'].rules,
       '@typescript-eslint/array-type': ['error', { default: 'generic' }],
+
+      // Stylistic
+      ...stylistic.configs['recommended-flat'].rules,
       '@stylistic/comma-dangle': ['error', 'never'],
       '@stylistic/arrow-parens': ['error', 'always'],
       '@stylistic/brace-style': ['error', '1tbs'],
       '@stylistic/quote-props': ['error', 'as-needed'],
-      '@stylistic/no-extra-parens': ['error', 'all']
+      '@stylistic/no-extra-parens': ['error', 'all'],
+
+      // Other
+      'no-console': ['warn', { allow: ['error', 'warn'] }]
     }
   }
 ]
