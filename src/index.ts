@@ -56,8 +56,8 @@ if (typeof window !== 'undefined') {
     }
   }
 
-  window.addEventListener('testPassive', null as unknown as EventListener, passiveTestOptions)
-  window.removeEventListener('testPassive', null as unknown as EventListener, passiveTestOptions)
+  window.addEventListener('__BSL_TEST_PASSIVE__', () => ({}), passiveTestOptions)
+  window.removeEventListener('__BSL_TEST_PASSIVE__', () => ({}), passiveTestOptions)
 }
 
 let locks: Array<Lock> = []
