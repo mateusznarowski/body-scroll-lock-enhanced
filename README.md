@@ -3,7 +3,7 @@
 Enhanced version of [body-scroll-lock](https://github.com/willmcpo/body-scroll-lock) package, main changes:
 
 - fixes [body-scroll-lock v4.0.0-beta.0 bug](https://github.com/willmcpo/body-scroll-lock/issues/271),
-- prevents unnecessary scrolling back to section on `enableBodyScroll` when property `scroll-behavior` is set to `true`,
+- prevents unnecessary scrolling back to section on `enableBodyScroll` when property `scroll-behavior` is set to `smooth`,
 - for browsers that support `scrollbar-gutter` set it instead of `padding-right` to the body element
 
 ---
