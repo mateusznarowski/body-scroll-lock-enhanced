@@ -209,7 +209,12 @@ const restorePositionSetting = (): void => {
     $body.style.height = bodyStyle.height || ''
     $body.style.overflow = bodyStyle.overflow || ''
 
-    window.scrollTo({ left: x, top: y, behavior: 'instant' })
+    const scrollBehaviorPropertySupported = CSS.supports('scroll-behavior', 'smooth')
+    if (scrollBehaviorPropertySupported) {
+      window.scrollTo({ left: x, top: y, behavior: 'instant' })
+    } else {
+      window.scrollTo(x, y)
+    }
 
     bodyStyle = undefined
   }
