@@ -177,12 +177,12 @@ const setPositionFixed = (): void => {
       $body.style.height = 'auto'
       $body.style.overflow = 'hidden'
 
-      setTimeout(() => {
+      setTimeout(() => window.requestAnimationFrame(() => {
         const bottomBarHeight = innerHeight - window.innerHeight
         if (bottomBarHeight && scrollY >= innerHeight) {
           $body.style.top = `${-(scrollY + bottomBarHeight)}px`
         }
-      }, 0)
+      }), 300)
     }
   })
 }
